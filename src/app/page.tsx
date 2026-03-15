@@ -11,7 +11,7 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden">
       <AmbientBackground />
 
-      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-24 px-6 pb-24 pt-8 sm:px-10">
+      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-24 px-8 pb-24 pt-8 sm:px-10">
         <Navigation />
         <Hero />
         <FeatureGrid />

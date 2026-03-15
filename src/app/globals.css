@@ -126,6 +126,7 @@ body {
   top: 0;
   bottom: 0;
   width: 20px;
+  margin: 0 4px;
   display: block;
   background-image: url("/MERVA-Edges.png");
   background-repeat: repeat-y;
