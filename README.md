@@ -1,2 +1,9 @@
-# MERV-Website
-MERVÅ is the umbrella entity for Sean FH's projects
+# MERVÅ Website
+
+Personal portfolio site for MERVÅ — websites, YouTube, and games.
+
+## Development
+
+```bash
+npm run dev
+```
