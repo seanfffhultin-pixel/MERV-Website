@@ -21,8 +21,12 @@ export function FeatureGrid() {
           key={item.title}
           className="glass glass-outline rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(120,5,15,0.12)]"
         >
-          <h3 className="text-lg font-semibold text-black">{item.title}</h3>
-          <p className="mt-3 text-sm text-black/70">{item.text}</p>
+          <h3 className="text-lg font-semibold text-black dark:text-white">
+            {item.title}
+          </h3>
+          <p className="mt-3 text-sm text-black dark:text-white">
+            {item.text}
+          </p>
         </div>
       ))}
     </section>

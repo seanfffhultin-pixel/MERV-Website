@@ -23,13 +23,36 @@ export const metadata: Metadata = {
   description: "MERVÅ is an umbrella portfolio for websites, videos, and games.",
 };
 
+const themeScript = `
+(() => {
+  try {
+    const stored = localStorage.getItem("merva-theme");
+    const theme =
+      stored === "light" || stored === "dark"
+        ? stored
+        : window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    document.documentElement.style.colorScheme = theme;
+  } catch {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body
         className={`${bricolage.variable} ${spaceGrotesk.variable} ${rockSalt.variable} antialiased`}
       >
